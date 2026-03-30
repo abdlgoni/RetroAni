@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEO TOKYO REVELATIONS - RetroAni</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Be+Vietnam+Pro:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#bd0052",
+              "background": "#0a0a28",
+              "on-error": "#490006",
+              "on-background": "#e5e3ff",
+              "on-error-container": "#ffa8a3",
+              "on-tertiary-fixed-variant": "#005e64",
+              "on-primary-container": "#4d001d",
+              "error": "#ff716c",
+              "surface-dim": "#0a0a28",
+              "on-tertiary-fixed": "#003f43",
+              "primary-fixed-dim": "#ff5486",
+              "tertiary-fixed-dim": "#00deec",
+              "primary-dim": "#e40a65",
+              "primary-fixed": "#ff7195",
+              "on-primary": "#620027",
+              "surface-container-highest": "#21214c",
+              "outline": "#737296",
+              "primary-container": "#ff7195",
+              "surface-variant": "#21214c",
+              "surface-bright": "#272755",
+              "on-primary-fixed-variant": "#5e0025",
+              "secondary-dim": "#edd600",
+              "on-secondary-fixed-variant": "#675c00",
+              "error-container": "#9f0519",
+              "on-surface": "#e5e3ff",
+              "secondary-fixed-dim": "#edd600",
+              "secondary-fixed": "#fde400",
+              "surface-container-lowest": "#000000",
+              "tertiary-container": "#00eefc",
+              "tertiary-dim": "#00deec",
+              "surface": "#0a0a28",
+              "tertiary": "#8ff5ff",
+              "surface-container-low": "#0f0f31",
+              "error-dim": "#d7383b",
+              "surface-container": "#15153a",
+              "secondary": "#fde400",
+              "on-secondary-fixed": "#484000",
+              "surface-container-high": "#1b1b43",
+              "inverse-surface": "#fcf8ff",
+              "on-tertiary": "#005d63",
+              "on-secondary-container": "#fff8dd",
+              "on-primary-fixed": "#000000",
+              "secondary-container": "#6a5f00",
+              "inverse-on-surface": "#525273",
+              "on-tertiary-container": "#005359",
+              "primary": "#ff8aa5",
+              "tertiary-fixed": "#00eefc",
+              "surface-tint": "#ff8aa5",
+              "on-surface-variant": "#a9a8ce",
+              "outline-variant": "#454565",
+              "on-secondary": "#5c5200"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0a0a28;
+            background-image: radial-gradient(circle at 2px 2px, #15153a 1px, transparent 0);
+            background-size: 24px 24px;
+            position: relative;
+        }
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 3px, 3px 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glitch-shadow {
+            text-shadow: 2px 0 #ff8aa5, -2px 0 #8ff5ff;
+        }
+    </style>
+</head>
+<body class="font-body text-on-background min-h-screen">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#0A0A28] bg-opacity-95 backdrop-blur-sm border-b-2 border-[#737296] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+<div class="text-2xl font-black text-[#FF2D78] tracking-widest uppercase font-headline">RetroAni</div>
+<div class="hidden md:flex gap-8 font-headline uppercase tracking-tighter items-center h-full">
+<a class="text-[#E5E3FF] hover:text-[#FF2D78] transition-all duration-75" href="#">Home</a>
+<a class="text-[#E5E3FF] hover:text-[#FF2D78] transition-all duration-75" href="#">Search</a>
+<a class="text-[#FDE400] border-b-2 border-[#FDE400] pb-1" href="#">Watchlist</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#FF2D78] cursor-pointer">search</span>
+<div class="w-8 h-8 bg-surface-container border-2 border-primary overflow-hidden">
+<img alt="User Avatar" data-alt="Stylized 8-bit pixel art portrait of a character with neon hair and futuristic goggles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSBRq6p4pUMDmarmq2gVTd7flE61bQDevZQtKIcK8PqvlVaIvcDdlj9Vk5niUmWQCFicuz2719iRLFHNDC07tQ1Qrds6Ls-HAMdLAhwlYGMuz8Z6d0KQQ3Q5KK26WkEy2aOJIZOh4NVk0LYCepuiNnLRfJBWy4qFQDEpu_CGM8wzhL240HCPFI75inJfJl0uCP6DpVdnwPALsD9doLG4D-LP5UcA8F3UEe2NmMBCIRsABunuIL9K2XmlXpSZN9geefb16-acKg1gkc"/>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden border-b-2 border-outline">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover blur-sm opacity-30" data-alt="Cinematic wide shot of a futuristic Tokyo cityscape at night with glowing pink and blue neon signs and dense metallic architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxOX90POxw3yUWj3HWHFtSZKT11dFnI3_oiq-Gii0GzVD_YrPFmBr007CQUi_suAtFes80T2swsIiXq9A2ZFuRjK9S_Y-2csRkSdy3-2qOvLRKt8WGvoL7o-ST294q7KSxh_KtkzIUopQfcXdGnPhCVKzPFEI-LcaX51U90iRs4OuZGf3-Q9-4rHyXg27ZGeSnoGDtaDXx5NoTXtuPZ6R5VRdwAN2g3lYojojIb7RB7w8ij7Y1y3gKxeVa6RWaXPyRaC1AAknE0pNk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="container mx-auto px-6 relative z-10 py-12 flex flex-col md:flex-row gap-12 items-start">
+<!-- Poster -->
+<div class="relative group self-center md:self-start">
+<div class="absolute -inset-1 bg-primary blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative bg-surface-container-highest border-2 border-primary shadow-[8px_8px_0px_0px_#ff8aa5] w-[280px] h-[400px] flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="High-contrast vertical anime poster featuring a cyborg character with mechanical parts and glowing red eyes against a dark urban backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIlbGXjoLaXEL6-WyPHUZlqSocQVqBcN_p4nC5yiiyiI_AqOtBzhChRJj8QOkF7YHJjyXCIH6qEQi6MzlGaV3w2BQvKt6cWjjFnmXayPdwePxc8MXLz3eK0mZwWkNKoIhNVz3nQB-DNgHKdAbkIPhghRGQVVhwhbclJMyaeQ-uJIWVnj70PkalmH4jCMJc2f87yhDvYOjMg2VibP8H_fi51Bj4UxoEyeOBswGjJo0URwmyD4vnBebqks8GO7Zy_JWVArC0449G_xh8"/>
+</div>
+</div>
+<!-- Content -->
+<div class="flex-1 space-y-6">
+<div class="space-y-1">
+<h1 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter text-on-background glitch-shadow">NEO TOKYO REVELATIONS</h1>
+<p class="font-headline text-secondary tracking-[0.3em] font-medium">ネオ東京の黙示録 — 199X ARCHIVE</p>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-3 py-1 bg-surface-container-high border border-outline text-tertiary font-label uppercase text-xs">Cyberpunk</span>
+<span class="px-3 py-1 bg-surface-container-high border border-outline text-tertiary font-label uppercase text-xs">Seinen</span>
+<span class="px-3 py-1 bg-surface-container-high border border-outline text-tertiary font-label uppercase text-xs">1999</span>
+<span class="px-3 py-1 bg-surface-container-high border border-outline text-tertiary font-label uppercase text-xs">24 Episodes</span>
+<span class="px-3 py-1 bg-secondary text-on-secondary font-label uppercase text-xs font-bold">Finished</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-headline font-black text-secondary">9.82</span>
+<span class="text-outline text-lg font-headline">/ 10</span>
+<div class="flex ml-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant max-w-2xl leading-relaxed text-lg">
+                        In the year 2099, Neo Tokyo is a sprawling megalopolis ruled by the omniscient "System Core." When a rogue data-runner discovers a hidden layer in the neural net, the boundaries between human consciousness and artificial intelligence begin to dissolve in a rain-soaked neon nightmare.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary text-on-primary font-headline font-bold uppercase px-8 py-3 border-2 border-on-primary-fixed shadow-[4px_4px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all">
+                            ADD TO WATCHLIST
+                        </button>
+<button class="bg-transparent text-secondary font-headline font-bold uppercase px-8 py-3 border-2 border-secondary shadow-[4px_4px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all">
+                            WATCH TRAILER
+                        </button>
+</div>
+<div class="grid grid-cols-3 gap-8 pt-8 border-t-2 border-outline-variant max-w-lg">
+<div>
+<p class="font-label text-outline uppercase text-[10px] tracking-widest">Rank</p>
+<p class="font-headline text-2xl font-bold text-tertiary">#1</p>
+</div>
+<div>
+<p class="font-label text-outline uppercase text-[10px] tracking-widest">Popularity</p>
+<p class="font-headline text-2xl font-bold text-tertiary">#5</p>
+</div>
+<div>
+<p class="font-label text-outline uppercase text-[10px] tracking-widest">Studio</p>
+<p class="font-headline text-2xl font-bold text-tertiary">CyberCore</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tabs Section -->
+<section class="container mx-auto px-6 py-12">
+<div class="flex gap-8 border-b-2 border-outline mb-8">
+<button class="font-headline font-bold text-secondary border-b-4 border-secondary pb-4 px-2 uppercase tracking-widest">EPISODES</button>
+<button class="font-headline font-bold text-outline hover:text-on-background pb-4 px-2 uppercase tracking-widest transition-colors">CHARACTERS</button>
+<button class="font-headline font-bold text-outline hover:text-on-background pb-4 px-2 uppercase tracking-widest transition-colors">RELATED</button>
+<button class="font-headline font-bold text-outline hover:text-on-background pb-4 px-2 uppercase tracking-widest transition-colors">REVIEWS</button>
+</div>
+<div class="space-y-4">
+<!-- Episode Item -->
+<div class="flex items-center gap-6 p-4 bg-surface-container hover:bg-surface-container-high border-2 border-transparent hover:border-outline-variant transition-all group">
+<div class="w-12 font-headline text-2xl font-black text-outline group-hover:text-primary">01</div>
+<div class="w-40 h-24 bg-black border-2 border-outline flex-shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Dark computer terminal screen with neon green code raining down in a futuristic data center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6--8rWQMEjRKnZF3mWgMCNcVecWbyQpDQ00rzY26rGkxMuNrsacSEUMbg4_geYrGF8IlDG5mZwt5gjnVcTRqkU1v_EijuIgGj4wkXrvhgpR14vWx7VBGHN37YwcIF9rsV0trgvCUtobJXZOCPI5PYRpaR4pfnT0CW456Jm4AnyHOukSgz2REJ0kb9_JRiaskDfK_OPVyO6XAYWKf1Kg4hVhj9pJWmypvordfNB3hcBC9bz6SLrs_DWg6Akj63Df2kk-7I5d4_9xw3"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/40">
+<span class="material-symbols-outlined text-white text-4xl">play_arrow</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-headline text-xl font-bold text-on-background uppercase tracking-tight">Protocol 01: The Breach</h3>
+<p class="text-sm text-outline uppercase tracking-wider mt-1">First Air: Oct 04, 1999</p>
+</div>
+<div class="text-tertiary font-label font-bold">24:00</div>
+</div>
+<div class="flex items-center gap-6 p-4 bg-surface-container hover:bg-surface-container-high border-2 border-transparent hover:border-outline-variant transition-all group">
+<div class="w-12 font-headline text-2xl font-black text-outline group-hover:text-primary">02</div>
+<div class="w-40 h-24 bg-black border-2 border-outline flex-shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Close-up of high-tech mechanical components with glowing orange fiber optic cables and dark metal plates" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOAJXx3gxNExDaSS3mJ3BOuSoeA5yZNHHhLWbDEWZZ6JNExI3gH8eh5TtOp7aLYwLs6hI4Fv0JvvtCze6JrhGVC_onZEqPNo6UVuEYRtoaFg71oVLc03lla9LChTE4upEZheUqnxlO6HGPqGrZhPy9YgqsX0yqyRDJK3s6KOXsx9hqrJbktUZI61AhR9UW3bGPV6ZIalcI25ju5R8MOkHUPQov2EXV4_TzEE6Hsk0ApsJkPKmycoq51WrHOoGEceP-ZJAwCqikVfXY"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/40">
+<span class="material-symbols-outlined text-white text-4xl">play_arrow</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-headline text-xl font-bold text-on-background uppercase tracking-tight">Protocol 02: Ghost in the Static</h3>
+<p class="text-sm text-outline uppercase tracking-wider mt-1">First Air: Oct 11, 1999</p>
+</div>
+<div class="text-tertiary font-label font-bold">24:00</div>
+</div>
+<div class="flex items-center gap-6 p-4 bg-surface-container hover:bg-surface-container-high border-2 border-transparent hover:border-outline-variant transition-all group">
+<div class="w-12 font-headline text-2xl font-black text-outline group-hover:text-primary">03</div>
+<div class="w-40 h-24 bg-black border-2 border-outline flex-shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Cinematic shot of a rainy street alley at night with bright neon signs reflected in puddles and high contrast shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtWGjF1ZaxqIyyClCtIBYxEC8fH0_0W99fbiJlEgsDrRax2KMa6D31OP6lTkP4S54CkUCxD98lEKsSAQUc0C0FjsfKGdH92rI9kEzOcvyexEjGgXeMCvwT_5Zg8mlmKTXFNRblScLD6VIVf9IUM7MCY6pZ0K0zxEU8P93CM02O6HaOyycOpvc05Hs-hSGmwiYwPj0di6hICxtOhYtMRSOMUovtVK4IU6ZI8NakOpHmEExejaKrGhDop3IdUdK37pEVrfDStqVnpb4O"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/40">
+<span class="material-symbols-outlined text-white text-4xl">play_arrow</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-headline text-xl font-bold text-on-background uppercase tracking-tight">Protocol 03: Neural Cascade</h3>
+<p class="text-sm text-outline uppercase tracking-wider mt-1">First Air: Oct 18, 1999</p>
+</div>
+<div class="text-tertiary font-label font-bold">24:00</div>
+</div>
+<div class="flex items-center gap-6 p-4 bg-surface-container hover:bg-surface-container-high border-2 border-transparent hover:border-outline-variant transition-all group">
+<div class="w-12 font-headline text-2xl font-black text-outline group-hover:text-primary">04</div>
+<div class="w-40 h-24 bg-black border-2 border-outline flex-shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Interior of a vintage electronics lab with CRT monitors showing glitched patterns and bundles of colorful wires" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv8c_WldQMWYLELPIG3G7Uo5IOydXO6FD6smdBP7NjDwpFc44oPzVYkhzfPKmpyYu4fygIfrGfFtoG9aMY5kBxe-QJ9rvv9qsrF4izSuJZ47votgXnye36ATi722t7gONa-Wkm3ao7Epj3ifgh-tw8ev1VdRGudpNOrSQv9NDov5ovZG59lw8zIB9G7phybf32e8Bd-yLOSv4iEscEtOlYgN6HW8BOaIt-1UMHuIz_54BuW-qmYplaiHRXnCQxVIcDZX7BuokDu4vb"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/40">
+<span class="material-symbols-outlined text-white text-4xl">play_arrow</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-headline text-xl font-bold text-on-background uppercase tracking-tight">Protocol 04: Silent Uplink</h3>
+<p class="text-sm text-outline uppercase tracking-wider mt-1">First Air: Oct 25, 1999</p>
+</div>
+<div class="text-tertiary font-label font-bold">24:00</div>
+</div>
+</div>
+</section>
+<!-- Related Section -->
+<section class="container mx-auto px-6 py-12 mb-20">
+<div class="flex items-center gap-4 mb-8">
+<h2 class="font-headline text-2xl font-black uppercase tracking-tighter text-primary">YOU MIGHT ALSO LIKE</h2>
+<div class="flex-1 h-[2px] bg-primary"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 pb-8"><!-- Related Card 1 -->
+<div class="group">
+<div class="h-[280px] bg-surface-container-high border-2 border-outline group-hover:border-primary transition-all relative overflow-hidden">
+<img class="w-full h-[70%] object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Anime artwork of a giant robot standing in a post-apocalyptic desert landscape under a red moon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2dSWXNj0ncHODkK7g7vAf5_aOzPeBw6aA_VXp1IyptdJq0QEiZ4Oxcl-cx7y_pTIXih3GlQXmfB7aC_7Fs72DKBnfV35EzmgUXhj6ImZVNelQV6evGygeJ9cHMuXIiT6SVo1b5jWX1QB0EhwIvUphS5c_dUemGvJfphQISFvPUs8bngh9nwWZKkNVE3ZKL6_v6aGNdU0bdjY3ZLK32YNSAf2z2GUWewbrEGibFpjBuXvrtsSNF7T7Bw-qpemYZm4ngXDdE8Dfkdeb"/>
+<div class="h-[30%] p-3 flex flex-col justify-center">
+<h3 class="font-headline text-xs font-bold uppercase tracking-tight truncate">VOID RUNNER 2049</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-[10px] text-tertiary font-label uppercase">Sci-Fi</span>
+<div class="flex items-center text-secondary text-[10px]">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>9.2</span>
+</div>
+</div>
+<span class="text-[8px] text-outline uppercase mt-1">Movie</span>
+</div>
+</div>
+</div>
+<!-- Related Card 2 -->
+<div class="group">
+<div class="h-[280px] bg-surface-container-high border-2 border-outline group-hover:border-secondary transition-all relative overflow-hidden">
+<img class="w-full h-[70%] object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Surreal digital art of a person floating in a digital void with geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2kftkLISTuUwUnwo0qqFC-YCdjEZa5uJgZFuX5Y1ywhkGJvefY2SWl68eWJOItjAkTQQ_6B78owrm3tnnMAedV-CVXC3BBquvpf_W41pdqK1xpycppc7cqEA3KFlIJ2WIsBrspQVDv9-pg_ultyyInIyJFCQ_9fGYG6HBE_fOb2s_l3Z-w3nkBdCkSSfgptDih0yEp2nKdbJG9HA_VZlqMAFKsaAM6V0tr-HmEpu_3Xp8bzlm_Dg-Mx0f93oEnBYVwGIhn9F3i1g-"/>
+<div class="h-[30%] p-3 flex flex-col justify-center">
+<h3 class="font-headline text-xs font-bold uppercase tracking-tight truncate">DIGITAL SOUL</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-[10px] text-tertiary font-label uppercase">Psych</span>
+<div class="flex items-center text-secondary text-[10px]">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>8.8</span>
+</div>
+</div>
+<span class="text-[8px] text-outline uppercase mt-1">24 Eps</span>
+</div>
+</div>
+</div>
+<!-- Related Card 3 -->
+<div class="group">
+<div class="h-[280px] bg-surface-container-high border-2 border-outline group-hover:border-primary transition-all relative overflow-hidden">
+<img class="w-full h-[70%] object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Vibrant synthwave illustration of a futuristic sports car driving towards a glowing neon sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8ndCdxBaTjBFDuO5Phzar0yw83zrYr6KMP1QKUZHCeio3nlShHmWRUwwkIQ4W6SiPaCulfXI3skmleBzv4q0PH2GD_2KFwpCxGvyetAvZShpBnbvGVxo-H2kHlWQcd_THkllZrg2rVxr-cfjwJmSyDDJKmgaB7CX273BlWdGSV5RSXYhaQmC8dJCkS18ylKHQA5s4gRCd5VCbI5WA8wFxHGLNqE0nyQFIHCMfVKR4rZV3Zq_BHpNovBxsiMuxy2vBS3V5175hEcBJ"/>
+<div class="h-[30%] p-3 flex flex-col justify-center">
+<h3 class="font-headline text-xs font-bold uppercase tracking-tight truncate">NEON OVERDRIVE</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-[10px] text-tertiary font-label uppercase">Action</span>
+<div class="flex items-center text-secondary text-[10px]">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>9.0</span>
+</div>
+</div>
+<span class="text-[8px] text-outline uppercase mt-1">OVA</span>
+</div>
+</div>
+</div>
+<!-- Related Card 4 -->
+<div class="group">
+<div class="h-[280px] bg-surface-container-high border-2 border-outline group-hover:border-secondary transition-all relative overflow-hidden">
+<img class="w-full h-[70%] object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Dramatic interior of a futuristic laboratory with medical pods" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD9BLgJ78UORkpEbxmjafU9DPOYD9bUeM1vT9KsDmBm1uiOJAm1Zsz2UgD5OSYe308812pnvahfVAPp295vNypoSJEUOjaXW9K4L4IwTTXrQq4mSVET4kjGx-xodJVYaK5TR5SJUHI3PJpoIBjsUbUUgYIKjzewUI7MRJU_aRwGnvxxIrnbmUjIBhFpjpOaJ9tPdQRnfUrUE5Impk7VXtTdNrBdqOti6g-GCxc3ZC3UiH6wqjA8D33fANur7KyW399SHQLMa3CVjPm"/>
+<div class="h-[30%] p-3 flex flex-col justify-center">
+<h3 class="font-headline text-xs font-bold uppercase tracking-tight truncate">GENETIC ERROR</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-[10px] text-tertiary font-label uppercase">Horror</span>
+<div class="flex items-center text-secondary text-[10px]">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>8.5</span>
+</div>
+</div>
+<span class="text-[8px] text-outline uppercase mt-1">12 Eps</span>
+</div>
+</div>
+</div>
+<!-- Related Card 5 -->
+<div class="group">
+<div class="h-[280px] bg-surface-container-high border-2 border-outline group-hover:border-primary transition-all relative overflow-hidden">
+<img class="w-full h-[70%] object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="High-angle view of a dense futuristic slum with stacked shipping containers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpzOk-SVqYolSL9Ps8WvbviDTR3-_Pd2A1g3qRxnf6UKyUjdmcw6whUtMkzkNMZ7lda9Jur1YGHZVf3NxcBftKmiiTm59bT3aPJb3v2Qm6WnHe89uxk299ld7CE20-saHMCH5yYnzh1gL4tnQTzRPy8mBxCK8hIr0exUCqAOr0RL3RYW-3qtG7KMF-zf2oTUT00qvtWMIg_jl6iQmaLIuncNPYlKDjUUyjHR8_3J4xo7LA4h2_Rc44VaLPhMRROxqgvFvY70ULh7Vx"/>
+<div class="h-[30%] p-3 flex flex-col justify-center">
+<h3 class="font-headline text-xs font-bold uppercase tracking-tight truncate">LOW LIFE HERO</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-[10px] text-tertiary font-label uppercase">Drama</span>
+<div class="flex items-center text-secondary text-[10px]">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>8.9</span>
+</div>
+</div>
+<span class="text-[8px] text-outline uppercase mt-1">Movie</span>
+</div>
+</div>
+</div></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-8 px-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0A0A28] border-t-2 border-[#737296]">
+<div class="text-[#FF2D78] font-bold font-headline uppercase tracking-widest">RetroAni</div>
+<div class="font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] text-[#737296] text-center">
+            © 199X RETROANI BROADCAST SYSTEMS. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex gap-6">
+<a class="text-[#737296] font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] hover:text-[#8FF5FF] transition-colors" href="#">Archives</a>
+<a class="text-[#737296] font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] hover:text-[#8FF5FF] transition-colors" href="#">Terms</a>
+<a class="text-[#737296] font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] hover:text-[#8FF5FF] transition-colors" href="#">Signal Status</a>
+</div>
+</footer>
+</body></html>
