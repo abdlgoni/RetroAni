@@ -70,3 +70,23 @@ export const getAnimeVideos = async (id) => {
   }
 };
 
+export const getAnimeCharacters = async (id) => {
+  try {
+    const response = await apiClient.get(`/anime/${id}/characters`);
+    return response.data;
+  } catch (error) {
+    throw new Error(error.response?.data?.message || 'Failed to fetch characters');
+  }
+};
+
+export const getAnimeReviews = async (id, page = 1) => {
+  try {
+    const response = await apiClient.get(`/anime/${id}/reviews`, {
+      params: { page }
+    });
+    return response.data;
+  } catch (error) {
+    throw new Error(error.response?.data?.message || 'Failed to fetch reviews');
+  }
+};
+
